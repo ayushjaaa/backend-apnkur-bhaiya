@@ -11,6 +11,7 @@
 // */
 const express = require('express')
 const controller = require('./controller/index.controller')
+const userController = require('./controller/user.controller')
 const app = express()
 
 
@@ -18,5 +19,6 @@ const app = express()
 app.get('/',controller.indexCOntroller)
 module.exports = app
 app.get('/about',controller.aboutController)
+app.get('/user/profile',userController.getProfile)
 
 
